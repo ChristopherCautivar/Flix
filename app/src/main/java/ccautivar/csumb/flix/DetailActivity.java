@@ -53,7 +53,7 @@ public class DetailActivity extends YouTubeBaseActivity {
         tvTitle.setText(movie.getTitle());
         tvOverview.setText(movie.getOverview());
         ratingBar.setRating((float) movie.getRating());
-        tvPop.setText(String.valueOf(movie.getPopularity()));
+        tvPop.setText("Popularity: " + String.valueOf(movie.getPopularity()));
 
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(String.format(VIDEOS_URL,movie.getMovieId()), new JsonHttpResponseHandler() {
